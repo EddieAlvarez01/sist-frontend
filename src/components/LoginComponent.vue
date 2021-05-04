@@ -18,7 +18,6 @@
                 </div>
             </div>
             <v-alert v-if="failure !== ''" class="alert-error" type="error">{{ failure }}</v-alert>
-            <v-alert v-if="success !== ''" class="alert-error" type="success">{{ success }}</v-alert>
         </div>
     </v-container>
 </template>
@@ -33,8 +32,7 @@ export default {
         return {
             email: '',
             password: '',
-            failure: '',
-            success: ''
+            failure: ''
         }
     },
 
@@ -47,7 +45,10 @@ export default {
             AccountHolderService.loginAccountHolder(this.email, this.password)
             .then(
                 (res) => {
-                    this.success = `${res.data.name} ${res.data.last_name}`;
+                    this.$store.commit('login', res.data);
+                    if(res.data.role === 'ADMIN') {
+                        this.$router.push('/create-institution');
+                    }
                 }
             ).catch(
                 () => {
