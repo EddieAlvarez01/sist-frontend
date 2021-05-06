@@ -48,6 +48,8 @@ export default {
                     this.$store.commit('login', res.data);
                     if(res.data.role === 'ADMIN') {
                         this.$router.push('/create-institution');
+                    }else{
+                        this.$router.push('/create-operation');
                     }
                 }
             ).catch(

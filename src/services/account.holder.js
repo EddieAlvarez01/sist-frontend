@@ -18,6 +18,10 @@ export default {
             email,
             password
         });
+    },
+
+    getAllAccountHolders() {
+        return axios.get(`${apiUrl}/account_holder`);
     }
 
 }

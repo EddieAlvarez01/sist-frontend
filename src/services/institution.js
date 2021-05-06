@@ -11,6 +11,10 @@ export default {
             address,
             phone
         });
+    },
+
+    GetAllInstitutions() {
+        return axios.get(`${apiUrl}/institution`);
     }
 
 }

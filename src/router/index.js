@@ -20,6 +20,41 @@ const routes = [
     component: () => import(/* webpackChunkName: "create-institution" */ "@/views/CreateInstitution.vue"),
   },
   {
+    path: '/create-account',
+    name: "CreateAccount",
+    component: () => import(/* webpackChunkName: "create-account" */ "@/views/CreateAccount.vue"),
+  },
+  {
+    path: '/create-operation',
+    name: 'CreateOperation',
+    component: () => import(/* webpackChunkName: "create-operation" */ "@/views/CreateOperation.vue")
+  },
+  {
+    path: '/report-one',
+    name: 'CreateReportOne',
+    component: () => import(/* webpackChunkName: "create-report-one" */ "@/views/CreateReportOne.vue")
+  },
+  {
+    path: '/report-two',
+    name: 'CreateReportTwo',
+    component: () => import(/* webpackChunkName: "create-report-two" */ "@/views/CreateReportTwo.vue")
+  },
+  {
+    path: '/report-three',
+    name: 'CreateReportThree',
+    component: () => import(/* webpackChunkName: "create-report-three" */ "@/views/CreateReportThree.vue")
+  },
+  {
+    path: '/report-four',
+    name: 'CreateReportFour',
+    component: () => import(/* webpackChunkName: "create-report-four" */ "@/views/CreateReportFour.vue")
+  },
+  {
+    path: '/report-five',
+    name: 'CreateReportFive',
+    component: () => import(/* webpackChunkName: "create-report-five" */ "@/views/CreateReportFive.vue")
+  },
+  {
     path: "/about",
     name: "About",
     // route level code-splitting
